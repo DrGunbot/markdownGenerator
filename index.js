@@ -49,4 +49,67 @@ inquirer.prompt([
     name: 'email',
     message: 'What is your email address?'
   }
-])
+  
+]).then((answers) => {
+  // Generate README.md file
+  const title = answers.title;
+  const license = answers.license;
+  const licenseBadge = getLicenseBadge(license);
+  const description = answers.description;
+  const installation = answers.installation;
+  const usage = answers.usage;
+  const contribution = answers.contribution;
+  const tests = answers.tests;
+  const github = answers.github;
+  const email = answers.email;
+
+  const readme = `# ${title}
+
+${licenseBadge}
+
+## Description
+
+${description}
+
+## Table of Contents
+
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+
+## Installation
+
+${installation}
+
+## Usage
+
+${usage}
+
+## License
+
+This project is licensed under the ${license} license.
+
+## Contributing
+
+${contribution}
+
+## Tests
+
+${tests}
+
+## Questions
+
+If you have any questions or comments about this project, please contact me at ${email}. You can also visit my [GitHub profile](https://github.com/${github}) for additional information and projects.`;
+
+  // Write README.md file to disk
+  fs.writeFile('README.md', readme, (err) => {
+    if (err) {
+      console.log(err);
+    } else {
+      console.log('README.md file successfully generated!');
+    }
+  });
+});
