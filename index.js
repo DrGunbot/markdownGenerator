@@ -113,3 +113,26 @@ If you have any questions or comments about this project, please contact me at $
     }
   });
 });
+
+// Returns the license badge for the specified license
+function getLicenseBadge(license) {
+    switch (license) {
+      case 'MIT':
+        return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+      case 'GPL':
+        return '[![License: GPL](https://img.shields.io/badge/License-GPL-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
+      case 'Apache':
+        return '[![License: Apache](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)';
+      case 'ISC':
+        return '[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)';
+      case 'BSD 2-Clause':
+        return '[![License: BSD 2-Clause](https://img.shields.io/badge/License-BSD%202--Clause-orange.svg)](https://opensource.org/licenses/BSD-2-Clause)';
+      case 'BSD 3-Clause':
+        return '[![License: BSD 3-Clause](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)';
+      case 'Unlicense':
+        return '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)';
+      case 'None':
+        return '';
+    }
+  }
+  
