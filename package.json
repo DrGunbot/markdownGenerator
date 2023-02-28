@@ -1,0 +1,22 @@
+{
+  "name": "markdowngenerator",
+  "version": "1.0.0",
+  "description": "A simple markdown README.md generator written in node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DrGunbot/markdownGenerator.git"
+  },
+  "author": "Sean Fox",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DrGunbot/markdownGenerator/issues"
+  },
+  "homepage": "https://github.com/DrGunbot/markdownGenerator#readme",
+  "dependencies": {
+    "inquirer": "^9.1.4"
+  }
+}
