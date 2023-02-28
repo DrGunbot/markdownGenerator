@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/DrGunbot/markdownGenerator#readme",
   "dependencies": {
-    "inquirer": "^9.1.4"
+    "inquirer": "^9.1.4",
+    "require": "^2.4.20"
   }
 }

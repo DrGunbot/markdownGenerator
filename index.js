@@ -1,8 +1,10 @@
-const inquirer = require('inquirer');
+const run = async () => {
+  // Use dynamic import instead of require for inquirer
+  const { default: inquirer } = await import('inquirer');
 const fs = require('fs');
 
 // Prompt user for information about their project
-inquirer.prompt([
+await inquirer.prompt([
   {
     type: 'input',
     name: 'title',
@@ -135,4 +137,5 @@ function getLicenseBadge(license) {
         return '';
     }
   }
-  
+}
+run();
